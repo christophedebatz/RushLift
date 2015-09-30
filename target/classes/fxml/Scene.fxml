@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.debatz.labs.rushlift.MainSceneController">
+   <children>
+      <ImageView fitHeight="465.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/elevator.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="walls" layoutX="334.0" layoutY="81.0" prefHeight="350.0" prefWidth="51.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="353.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="49.0" />
+            <Group fx:id="pulley" layoutX="-334.0" layoutY="-80.0">
+               <children>
+                  <Circle fill="WHITE" layoutX="358.0" layoutY="93.0" radius="13.0" stroke="BLACK" strokeDashOffset="3.0" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeWidth="2.0" />
+                  <Circle layoutX="358.0" layoutY="93.0" radius="7.0" stroke="BLACK" strokeDashOffset="3.0" strokeLineCap="ROUND" strokeLineJoin="BEVEL">
+                     <fill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop color="#979797" />
+                              <Stop color="#dadada" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </fill>
+                  </Circle>
+                  <Line endX="5.0" layoutX="366.0" layoutY="93.0" />
+               </children>
+            </Group>
+            <Rectangle fx:id="cabine" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="79.0" layoutX="2.0" layoutY="238.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="43.0" />
+         </children>
+      </Pane>
+      <Button fx:id="startUpButton" layoutX="14.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleStartUpButtonAction" text="Up" />
+      <Rectangle fx:id="leftCable" arcHeight="5.0" arcWidth="5.0" fill="#6b6b6b" height="221.0" layoutX="344.0" layoutY="99.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+      <Rectangle fx:id="rightCable" arcHeight="5.0" arcWidth="5.0" fill="#6b6b6b" height="221.0" layoutX="368.0" layoutY="99.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+      <Button fx:id="stopButton" layoutX="116.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleStopButtonAction" text="Stop" />
+      <Label fx:id="floorLabel" layoutX="165.0" layoutY="458.0" text="0 floor">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="startDownButton" layoutX="52.0" layoutY="459.0" mnemonicParsing="false" onAction="#handleStartDownButtonAction" text="Down" />
+      <Button fx:id="floor0" layoutX="303.0" layoutY="349.0" mnemonicParsing="false" onAction="#handleFloorButton" prefHeight="25.0" prefWidth="15.0" text="o" />
+      <Button fx:id="floor1" layoutX="303.0" layoutY="273.0" mnemonicParsing="false" onAction="#handleFloorButton" prefHeight="25.0" prefWidth="15.0" text="o" />
+      <Button fx:id="floor2" layoutX="303.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleFloorButton" prefHeight="25.0" prefWidth="15.0" text="o" />
+      <Button fx:id="floor3" layoutX="303.0" layoutY="120.0" mnemonicParsing="false" onAction="#handleFloorButton" prefHeight="25.0" prefWidth="15.0" text="o" />
+      <ImageView fitHeight="50.0" fitWidth="24.0" layoutX="269.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/man3.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
